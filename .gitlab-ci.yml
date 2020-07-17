@@ -1,0 +1,7 @@
+heroku:
+ stage: deploy
+ only:
+ - master
+ script:
+ - git remote add heroku https://heroku:$heroku-api-key@git.heroku.com/portfolio-shriya.git
+ - git push -f heroku master
